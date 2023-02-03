@@ -1,11 +1,12 @@
 import React, {useState } from 'react';
+import Search from './components/Search';
 import data from './models.products.json';
-import Booklist from './components/Booklist';
+import Productlist from './components/Productlist';
+import Header from './components/Header';
 
 
 function App() {
   const [products, setProducts] = useState(data);
-  const [cart, setCart] = useState([]);
   const [keyword, setKeyword] = useState('');
 
   async function findProucts(value) {
