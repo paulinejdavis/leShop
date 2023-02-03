@@ -24,7 +24,8 @@ const Product = (props) => {
         </div>
         <p>{description ? description.join(', ') : "more products coming soon"}</p>
         {price &&<p>£{price.amount}</p>}
-        {stock &&<p>£{stock}</p>}
+        {stock &&<p>{stock}</p>}
+        {category &&<p>{category}</p>}
         <div>
         <button type="button" onClick={() => props.addProduct(props.product)}>Add to Cart</button>
         </div>
@@ -46,9 +47,9 @@ Product.propTypes = {
         imageLinks: PropTypes.shape({
             thumbnail: PropTypes.string.isRequired
         })
-    }).
+    })
     
-    Product.defaultProps = {
+    .Product.defaultProps = {
         description: [],
         price: {
             amount: 0,
