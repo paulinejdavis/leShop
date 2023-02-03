@@ -5,23 +5,22 @@ import PropTypes from 'prop-types'
 
 const Product = (props) => {
     const {id,
-        product: {Category,
-            Title,
-            Description,
-            Price, 
-            Stock
-            //imageLinks: {thumbnail}
+        product: {category,
+            title,
+            description,
+            price, 
+            stock,
+            imageLinks: {thumbnail}
         }
-        
         } = props.product;
 
     return (
  <main>
         <div key={id} className="product">
-        <im src={thumbnail} alt={Title} />
+        <im src={thumbnail} alt={title} />
         </div>
         <div>
-        <h3>{Title}</h3>
+        <h3>{title}</h3>
         </div>
         <p>{description ? description.join(', ') : "more products coming soon"}</p>
         {price &&<p>£{price.amount}</p>}
@@ -29,8 +28,9 @@ const Product = (props) => {
         <div>
         <button type="button" onClick={() => props.addProduct(props.product)}>Add to Cart</button>
         </div>
-</main>)
+    </main>)
 
+}
 
 Product.propTypes = {
     product: PropTypes.shape({
@@ -61,8 +61,13 @@ Product.propTypes = {
 
     }
 
-}
-
+};
 
 
 export default Product;
+
+// function Product() {
+//   return "This is the output of a Product component. Replace this string with code to display an individual product's attributes.";
+// }
+
+// export default Product;
