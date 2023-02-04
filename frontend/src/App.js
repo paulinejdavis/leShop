@@ -1,4 +1,5 @@
-import React, {useState } from 'react';
+import React, {useState, useEffect } from 'react';
+import axios from 'axios';
 import Search from './components/Search';
 import data from './models/products.json';
 import Productlist from './components/ProductList';
@@ -9,18 +10,47 @@ import About from './pages/About'
 
 function App() {
   const [products, setProducts] = useState(data);
-  const [viewProducts, setViewProducts] = useState(data);
+  const [viewProducts, setViewProducts] = useState([]);
   const [keyword, setKeyword] = useState('');
 
-  async function findProducts(value) {
-    const url = `https:www.dummyjson.com/docs/products`;
+  // async function findProducts(value) {
+    // const url = `https://www.dummyjson.com/products`;
+    // try{
+    //   const response = await fetch(url);
+    //   if(!response.ok){
+    //     throw new Error(response.statusText);
+    //   }
+     
+      // const results = await response.json();
 
-    const results = await fetch(url).then(res => res.json());
-  if (!results.error) {
-    setProducts(results.items);
-  }
+  
+      //   if (!results.error) {
+      //     setProducts(results.items);
+      //   }
+      // } catch (error) {
+      //     console.error(error);
+      // }
 
-  }
+  // }
+  useEffect(() => {
+    const findProducts = async () => {
+      const response = await axios.get(
+        'https://www.dummyjson.com/products');
+        
+
+      setProducts(response.data.products);
+      console.log(response.data.products);
+    };
+
+    findProducts();
+  }, []);
+
+//   fetch('https://dummyjson.com/products')
+// .then(res => res.json())
+// .then(console.log);
+            
+
+
   function deleteProduct(id) {
     setViewProducts(viewProducts.filter(product => product.id !== id));
 
@@ -33,6 +63,11 @@ function App() {
       });
 
   }
+//   fetch('https://dummyjson.com/products/1', {
+//   method: 'DELETE',
+// })
+// .then(res => res.json())
+// .then(console.log);
 
 
   return (
@@ -40,10 +75,11 @@ function App() {
       <Routes>
         <Route exact path="/" element={
         <>
-        <Header/>
+        
         <h2>Le Shop App</h2>
-        <Search keyword={keyword} setKeyword={setKeyword} findProducts={findProducts}/>
+        <Search keyword={keyword} setKeyword={setKeyword} setProducts={setProducts}/>
         <Productlist products={products} deleteProduct={deleteProduct}/>
+       
         {/* </div> */}
         </>
         } />

@@ -5,8 +5,8 @@ const Header = () => {
   return (
     <>
       <h1>Le Shop</h1>
-      <Link to="/"> Home </Link>
-      <Link to="/products" className="ProductLink">
+      <Link to="/"> About</Link>
+      <Link to="/categories" className="ProductLink">
         Products
       </Link>
       {/* <Link to="/cart" className="ProductLink">Cart</Link> */}

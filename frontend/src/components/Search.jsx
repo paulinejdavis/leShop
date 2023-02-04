@@ -3,7 +3,7 @@ import React from 'react'
 const Search = (props) => {
     const handleSubmit = (event) => {
         event.preventDefault();
-        props.findProucts(props.keyword);
+        props.findProducts(props.keyword);
     };
 
     return <form onSubmit={handleSubmit}>
@@ -20,4 +20,7 @@ const Search = (props) => {
 
  }
  
+//  fetch('https://dummyjson.com/products/search?q=phone')
+// .then(res => res.json())
+// .then(console.log);
 export default Search;

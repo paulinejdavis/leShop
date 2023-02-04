@@ -5,13 +5,14 @@ import PropTypes from 'prop-types'
 
 const Product = (props) => {
     const {id,
-        product: {category,
+        // product: {category,
+            category,
             title,
             description,
             price, 
             stock,
             imageLinks: {thumbnail}
-        }
+        // }
         } = props.product;
 
     return (
@@ -27,7 +28,7 @@ const Product = (props) => {
         {stock &&<p>{stock}</p>}
         {category &&<p>{category}</p>}
         <div>
-        <button type="button" onClick={() => props.addProduct(props.product)}>Add to Cart</button>
+        <button type="button" onClick={() => props.deleteProduct(props.product)}>Delete</button>
         </div>
     </main>)
 
