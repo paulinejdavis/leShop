@@ -5,7 +5,8 @@
  
 ## Tech stack
 
-* Node (v18.12)
+* [React](https://reactjs.org/) for front end user interface.
+* [Node.js](https://nodejs.org/en/) for the server environment(v18.12)
 * NPM (8.19.2)
 * Nodemon (2.0.20) to reload the server automatically.
 
