@@ -32,7 +32,7 @@ I would like a display of category, title, description, price and stock
 ## Diagrams
 
 ### Wireframe Diagram
-<!-- <img src='frontend/src/images/wireframe.png'/> -->
+ <img src='frontend/src/images/wireframe.png'/> 
 
 ### Frontend & Backend Diagram
 <!-- <img src='frontend/src/images/diagram.png'/> -->
