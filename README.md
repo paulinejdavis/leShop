@@ -46,7 +46,7 @@ I would like button functionality to see products by category.
 ### Frontend & API Diagram
 <!-- <img src='frontend/src/images/diagram.png'/> -->
 
-## How to run
+## How to run this project
 
 Clone this repository:
 
@@ -63,3 +63,4 @@ npm install
 npm start
 ```
 
+ Browse to [http://localhost:3000](http://localhost:3000)
