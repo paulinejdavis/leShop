@@ -34,7 +34,7 @@ I would like a display of category, title, description, price and stock
 ### Wireframe Diagram
  <img src='frontend/src/images/wireframe.png'/> 
 
-### Frontend & Backend Diagram
+### Frontend & API Diagram
 <!-- <img src='frontend/src/images/diagram.png'/> -->
 
 ## How to run
@@ -51,6 +51,6 @@ Run the frontend:
 ```
 cd frontend
 npm install
-npm run start
+npm start
 ```
 
