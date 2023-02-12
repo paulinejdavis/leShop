@@ -1,6 +1,10 @@
 import React, {useState, useEffect } from 'react';
 import axios from "axios";
 
+import Navbar from "./components/Navbar";
+
+
+
 function Product(props) {
 
     if (!props.product) {
@@ -9,7 +13,16 @@ function Product(props) {
 
 
     return (
-        <div>
+        <div className = "App">
+        
+         <Navbar className="navbar"
+            minimal={true}
+            setShowModal={() => {
+            
+
+            }}
+            showModal={false}
+            />
             
         </div>
     )
