@@ -13,7 +13,7 @@ function Product(props) {
 
 
     return (
-        <div>
+     <div>
     <div style={{marginLeft: "40px",backgroundColor: "white", border: "none", width: "600px", height: "30%", padding: "10px", display: "inline-block", border: "1px solid white"}}>
       <p style={{border: "1px solid rgb(50 43 128)",  padding: "5px", display: "inline-block", color: "white",  backgroundColor: "rgb(50 43 128)",}}>{props.product.category}</p>
       <h2 style={{ fontWeight: "bold", fontSize: "30px", marginTop: 0, marginBottom: '10px', }}>{props.product.title}</h2>
@@ -31,6 +31,7 @@ function Product(props) {
 
 function Datafetching() {
     const [products, setProducts] = useState([]);
+    const [sortBy, setSortBy] = useState("title");
 
     useEffect(() => {
         axios
@@ -44,7 +45,20 @@ function Datafetching() {
           });
       }, [])
     
+      const handleSort = (e) => {
+        setSortBy(e.target.value);
+      };
 
+
+      const sortedProducts = filteredProducts.sort((a, b) => {
+        if (sortBy === "category") {
+          return a[sortBy].localeCompare(b[sortBy]);
+        } else if (sortBy === "price" || sortBy === "stock") {
+          return a[sortBy] - b[sortBy];
+        } else {
+          return a[sortBy].localeCompare(b[sortBy]);
+        }
+      });
       return (
 
         <div className ="App">
@@ -72,6 +86,7 @@ function Datafetching() {
             onDelete={handleDelete} 
             />
 
+             //   .sort((a, b) => a.title.localeCompare(b.title))
             ))
 
               }
@@ -82,3 +97,5 @@ function Datafetching() {
    
       );
 }
+
+export default Datafetching;
