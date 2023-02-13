@@ -20,7 +20,7 @@ function Product(props) {
       <p style={{marginTop: 0, marginBottom: '10px', }}>{props.product.description}</p>
       <p style={{fontSize: "25px", marginTop: 0, marginBottom: '10px', }}>£{props.product.price}</p>
       <p style={{color: "grey", marginTop: 0, marginBottom: '10px', }}>Stock: {props.product.stock}</p>
-      <button style={{backgroundColor: "grey", color: "black", margin:"5px", width: "75px", height: "25px", fontWeight: "bold", fontSize:"18px", textAlign:"center",border: "none",}} onClick={() => props.onDelete(props.product.id)}>Delete</button>
+      <button style={{backgroundColor: "grey", color: "black", margin:"1px", width: "75px", height: "25px", fontWeight: "bold", fontSize:"18px", textAlign:"center",border: "none",}} onClick={() => props.onDelete(props.product.id)}>Delete</button>
       </div>
       <br/>
       <br/>

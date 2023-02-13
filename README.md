@@ -1,11 +1,12 @@
 # leShop
 
-"View Products" build a react app to allow users  to view a list of products
- with additional functionality of sort and search. 
- Products API: https://dummyjson.com/docs/products
+"View Products" a react app build to allow users to view a list of products
+ from Products API: https://dummyjson.com/docs/productswith additional With additional functionality of sort, search, delete and filter. 
+ 
 ## Tech stack
 
-* Node (v18.12)
+* [React](https://reactjs.org/) for front end user interface.
+* [Node.js](https://nodejs.org/en/) for the server environment(v18.12)
 * NPM (8.19.2)
 * Nodemon (2.0.20) to reload the server automatically.
 
@@ -26,7 +27,16 @@ I would like to see a display on the product page by title and in ascending orde
 ```
 As a leShop user
 So I can see the vital information for each product
-I would like a display of category, title, description, price and stock
+I would like a display of category, title, description, price and stock.
+```
+
+```
+As a leShop user
+So I can see the view products by category
+I would like button functionality to see products by category.
+```
+
+```
 ```
 
 ## Diagrams
@@ -34,10 +44,10 @@ I would like a display of category, title, description, price and stock
 ### Wireframe Diagram
  <img src='frontend/src/images/wireframe.png'/> 
 
-### Frontend & Backend Diagram
+### Frontend & API Diagram
 <!-- <img src='frontend/src/images/diagram.png'/> -->
 
-## How to run
+## How to run this project
 
 Clone this repository:
 
@@ -51,6 +61,7 @@ Run the frontend:
 ```
 cd frontend
 npm install
-npm run start
+npm start
 ```
 
+ Browse to [http://localhost:3000](http://localhost:3000)
