@@ -7,7 +7,7 @@ const Navbar = () => {
     return (
 
         <nav>
-            <img src={logo}className='logo' alt={"longlogo"}width={1300} style={{display: 'block', margin: '0 auto', marginTop: "40px"}} />
+            <img src={logo}className='logo' alt={"longlogo"}width={1260} style={{display: 'block', margin: '0 auto', marginTop: "40px"}} />
         </nav>
     )
 }
