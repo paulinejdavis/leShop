@@ -52,7 +52,7 @@ I would like button functionality to see products by category.
 Clone this repository:
 
 ```
-git clone https://github.com/paulinejdavis/leShop_app.git
+git clone https://github.com/paulinejdavis/leShop.git
 
 ```
 
